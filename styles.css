@@ -1,0 +1,122 @@
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10%;
+  }
+  
+  .container p {
+    text-align: center;
+  }
+  
+  .clock {
+    position: relative;
+    width: 310px; /* Ancho del contenedor del reloj por defecto */
+    height: 310px; /* Altura del contenedor del reloj por defecto */
+    margin: 10px auto;
+    border-radius: 50%;
+    overflow: hidden; /* Para asegurar que las llamas no se desborden */
+    border: 1px solid white; /* Borde circular blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Círculo blanco solo con la línea exterior */
+  .clock::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  
+  /* Contenedor para la imagen centrada */
+  .center-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Ancho deseado para la imagen */
+    height: 200px; /* Altura deseada para la imagen */
+  }
+  
+  .center-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta la imagen para que quepa dentro de .center-image */
+  }
+  
+  .flame {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 3s, opacity 3s;
+  }
+  
+  .flame img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .flame.off {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  .donacion{
+    margin-top: -20%;
+
+  }
+  
+
+  @media (min-width: 480px) and (max-width: 720px) {
+    .clock {
+      width: 100%;
+      height: 65vh;
+      border: 1px solid white;
+      overflow: hidden;
+      margin-top: 100px;
+    }
+  
+    .flame {
+      width: 30px; /* Ajustar el tamaño de las llamas */
+      height: 30px;
+    }
+  
+    /* Ajuste de posición para cada hora en pantallas más pequeñas */
+    .clock::before {
+      height: 100px; /* Ajusta la altura de la línea para pantallas más pequeñas */
+    }
+  
+    .container {
+      width: 80%; /* Ancho del contenedor principal para pantallas pequeñas */
+      height: 80%; /* Altura del contenedor principal para pantallas pequeñas */
+      margin: 0 auto;
+    }
+  }
+
+
+  
+
+
+  
