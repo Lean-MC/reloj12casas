@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const clockImage = document.getElementById('clockImage');
   const nightStartHour = 18; // 6 PM
   const nightEndHour = 6;    // 6 AM
-  const dayImage = 'imagenes/sol.png'; // Imagen para el día
-  const nightImage = 'imagenes/luna.png'; // Imagen para la noche
+  const dayImage = 'sol.png'; // Imagen para el día
+  const nightImage = 'luna.png'; // Imagen para la noche
   const flames = [];
   const radius = 130; // Radio del círculo de llamas
   const centerX = 150; // Centro del círculo (mitad del tamaño del reloj)
   const centerY = 150; // Centro del círculo (mitad del tamaño del reloj)
-  const imagePath = 'imagenes/flama.gif'; // Ruta de la imagen de la llama
+  const imagePath = 'flama.gif'; // Ruta de la imagen de la llama
 
   // Obtener la hora actual
   const currentDate = new Date();
